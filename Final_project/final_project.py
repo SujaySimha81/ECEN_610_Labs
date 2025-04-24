@@ -54,7 +54,7 @@ def mlp_regress_calibrate(X_train, Y_train):
         hidden_layer_sizes=(128,),
         activation='relu', #relu activation function
         solver='adam', #optimization function
-        max_iter=450,
+        max_iter=600,
         random_state=0
     )
     mlp.fit(X_train, Y_train)
@@ -101,7 +101,7 @@ def sndr_sfdr_calc(y, fs, nfft=8192):
 def run_ADC():
     start_time = time.time()
 
-    N_train = 20000
+    N_train = 50000
     N_test  = 8192
     
     #inputs ->
